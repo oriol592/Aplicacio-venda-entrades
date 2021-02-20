@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!-- Això és el que anirà dins de cada element de la listView on es mostren les properes actuacions -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="4">
+
+        <ImageView
+            android:layout_width="@dimen/tamanyCostatIconesPetites"
+            android:layout_height="@dimen/tamanyCostatIconesPetites"
+            android:scaleType="fitXY"
+            android:src="@drawable/lloc"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/llocActuacio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/margeEntreIconaIText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="6">
+        <!-- Aquest LinearLayout conté les dates i la sala del concert -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tamanyCostatIconesPetites"
+                android:layout_height="@dimen/tamanyCostatIconesPetites"
+                android:scaleType="fitXY"
+                android:src="@drawable/calendarirellotge"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/dataHoraActuacio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="@dimen/margeEntreIconaIText"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/tamanyCostatIconesPetites"
+                android:layout_height="@dimen/tamanyCostatIconesPetites"
+                android:scaleType="fitXY"
+                android:src="@drawable/iconasala"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/salaActuacio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="@dimen/margeEntreIconaIText"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Un ScrollView serveix perquè es pugui fer scroll a la pàgina. S'ha de posar tot el
+     contingut dins seu, tot recordant que només admet un element fill directe dins seu. Per
+     tant l'element que li fico dins és un LinearLayout que té tot el contingut -->
+<ScrollView android:id="@+id/ScrollViewID"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/titolArtistaComprarEntrades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:id="@+id/imatgeArtistaComprarEntrades"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Contenidor de les dades de l'actuació (data, hora, lloc, sala) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <!-- Icona lloc i text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iconaLlocComprarEntrades"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lloc"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/llocComprarEntrades"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="3dp"/>
+
+                </LinearLayout>
+
+                <!-- Icona data i hora, i text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+
+                    <ImageView
+                        android:id="@+id/iconaDataComprarEntrades"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/calendari"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/dataComprarEntrades"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="3dp"/>
+
+                    <ImageView
+                        android:id="@+id/iconaHoraComprarEntrades"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rellotge"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/horaComprarEntrades"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="3dp"/>
+
+                </LinearLayout>
+
+                <!-- Icona i text de la sala -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+
+                    <ImageView
+                        android:id="@+id/iconaSalaComprarEntrades"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/iconasala"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/salaComprarEntrades"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="3dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Caixa contenidora dels radiobuttons de les entrades i els botons per seleccionar el
+             número d'entrades -->
+
+            <!-- Error: Abans no es veien els botons, perquè havia posat que l'amplada del RadioGroup fos match_parent,
+             i per tant, els botons quedaven fora de la pantalla -->
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonEntradaNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/entradaNormal"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="15dp"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonEntradaAnticipada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/entradaAnticipada"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="35dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/botoMesEntradaNormal"
+                        android:layout_width="45dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/mes"/>
+
+                    <TextView
+                        android:id="@+id/numEntradesNormals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/num0perDefecte"/>
+
+                    <Button
+                        android:id="@+id/botoMenysEntradaNormal"
+                        android:layout_width="45dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/menys"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:id="@+id/botoMesEntradaAnticipada"
+                        android:layout_width="45dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/mes"/>
+
+                    <TextView
+                        android:id="@+id/numEntradesAnticipades"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/num0perDefecte"/>
+
+                    <Button
+                        android:id="@+id/botoMenysEntradaAnticipada"
+                        android:layout_width="45dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/menys"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/botoComprarEntrades"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorFonsCardsArtista"
+            android:text="@string/comprarEntrada"/>
+
+
+        <!-- Aquest LinearLayout és el que conté la icona del text i el text explicatiu de cada grup -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="@dimen/tamanyCostatIconesPetites"
+                android:layout_height="@dimen/tamanyCostatIconesPetites"
+                android:scaleType="fitXY"
+                android:src="@drawable/openbook"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/margeLayoutEsquerraDreta"/>
+
+            <TextView
+                android:id="@+id/descripcioArtistaComprarEntrades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="@dimen/margeEntreIconaIText"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

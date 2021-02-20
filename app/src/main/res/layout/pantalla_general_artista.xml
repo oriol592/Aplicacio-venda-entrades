@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:id="@+id/ScrollViewID"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Aquest LinearLayout conté el nom de l'artista i el cor -->
+        <!-- Per aconseguir posar el títol al mig: https://thinkandroid.wordpress.com/2010/01/14/how-to-position-views-properly-in-layouts/ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/nomArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/botoCorPantallaGeneralArtista"
+                android:layout_width="@dimen/tamanyCostatCor"
+                android:layout_height="@dimen/tamanyCostatCor"
+                android:src="@drawable/corbuit"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="3dp"/>
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/imatgeArtista"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/titolProperesActuacions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/properesActuacions"
+            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/margeLayoutEsquerraDreta"/>
+
+        <ListView
+            android:id="@+id/listViewProperesActuacions"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="8dp">
+            </ListView>
+
+        <!--
+        <Button
+            android:id="@+id/botoComprarEntrades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comprarEntrades"
+            android:layout_marginTop="10dp"/> -->
+
+        <TextView
+            android:id="@+id/textArtistesSimilars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/artistesSimilars"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/margeLayoutEsquerraDreta"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewArtistesSimilars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/grocMoltSuau"/>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f44336</color>
+    <color name="colorPrimaryDark">#ba000d</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorFonsCardsArtista">#ffff72</color>
+    <color name="colorFonsGrocMesFosc">#ffeb3b</color>
+    <color name="grocMoltSuau">#ffffcf</color>
+    <color name="blancTrencat">#fffde7</color>
+</resources>

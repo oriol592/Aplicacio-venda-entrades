@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/blancTrencat">
+
+        <ImageView
+            android:id="@+id/imatgeArtista"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Aquest linear layout conté el títol del grup i el cor per afegir a preferits -->
+
+                <TextView
+                    android:id="@+id/nomArtista"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+                <!-- He posat que l'amplada es calculi amb el weight perquè de la manera normal no funcionava.
+                 El cor de un 15% de l'espai -->
+
+                <ImageView
+                    android:id="@+id/corAfegirPreferits"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="30dp"
+                    android:src="@drawable/corbuit"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/llocActuacioArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

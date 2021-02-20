@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Concertea</string>
+    <string name="ultimesNovetats">Últimes novetats</string>
+    <string name="properesActuacions">Properes actuacions: </string>
+    <string name="artistesSimilars">Artistes similars: </string>
+    <string name="comprarEntrada">Comprar entrades</string>
+    <string name="entradaNormal">Entrada normal     20€ </string>
+    <string name="entradaAnticipada">Entrada anticipada     12€ </string>
+    <string name="mes">+</string>
+    <string name="menys">-</string>
+    <string name="num0perDefecte">0</string>
+</resources>

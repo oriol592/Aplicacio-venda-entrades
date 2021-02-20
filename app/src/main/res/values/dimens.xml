@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margeLayoutEsquerraDreta">8dp</dimen>
+    <dimen name="tamanyCostatIconesPetites">15dp</dimen>
+    <dimen name="margeEntreIconaIText">3dp</dimen>
+    <dimen name="tamanyCostatCor">30dp</dimen>
+</resources>
